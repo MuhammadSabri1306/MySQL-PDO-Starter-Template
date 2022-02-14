@@ -35,9 +35,9 @@ class Database
 	function bind($param, $value, $type = null){
 		if(is_null($type)){
 			$type = is_int($value) ? PDO::PARAM_INT
-				: is_bool($value) ? PDO::PARAM_BOOL
-				: is_null($value) ? PDO::PARAM_NULL
-				: PDO::PARAM_STR;
+				: (is_bool($value) ? PDO::PARAM_BOOL
+				: (is_null($value) ? PDO::PARAM_NULL
+				: PDO::PARAM_STR));
 		}
 
 		$this->stm->bindValue($param, $value, $type);
