@@ -1,6 +1,9 @@
 <?php
 /**
- * 
+ * MySQL PDO Starter Template for PHP
+ * source: https://github.com/MuhammadSabri1306/MySQL-PDO-Starter-Template
+ * By Muhammad Sabri
+ *
  */
 class Database
 {
